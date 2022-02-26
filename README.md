@@ -5,4 +5,4 @@
 4) Lab 3 :- Implement basic logic gates using Hebbnet neural networks.
 5) Lab 4 :- Implement Zipf's Law of Length, Law of Meanings and Heap Law.
 6) Lab 5 :- Text classification for Sentimental analysis using KNN. Note: Use twitter data.
-7) Lab 6 :-
+7) Lab 6 :- Case Study :- Sentiment Analysis via Reviews
