@@ -3,6 +3,8 @@
 """
 Simple RAG system - Ask questions about your documents!
 Uses your vector_documents table and Mistral AI model.
+
+Author(s): Saket Khopkar
 """
 
 import os
@@ -112,7 +114,7 @@ Answer:"""
 
 def rag_answer(user_question):
     """Main function: Get answer using your documents"""
-    print("🔍 Searching your documents...")
+    print("Searching your documents...")
     
     # Step 1: Find similar document chunks
     chunks = find_similar_chunks(user_question)
@@ -130,11 +132,11 @@ def rag_answer(user_question):
             sources.append(doc_name)
     
     # Step 3: Ask AI
-    print("🤖 Getting AI response...")
+    print("Getting AI response...")
     answer = ask_ai(context, user_question)
     
     # Step 4: Add sources
-    answer += f"\n\n📚 Sources: {', '.join(sources)}"
+    answer += f"\n\nSources: {', '.join(sources)}"
     
     return answer
 
@@ -173,7 +175,7 @@ def check_database():
         print(f"Database check error: {e}")
 
 def main():
-    print("🚀 Simple RAG System Ready!")
+    print("Simple RAG System Ready!")
     print("Ask questions about your documents\n")
     
     # Check database first
@@ -186,12 +188,12 @@ def main():
         question = input("Your question (or 'quit' to exit): ")
         
         if question.lower() in ['quit', 'exit']:
-            print("Goodbye! 👋")
+            print("Goodbye!")
             break
         
         if question.strip():
             answer = rag_answer(question)
-            print(f"\n💡 Answer:\n{answer}\n")
+            print(f"\nAnswer:\n{answer}\n")
             print("-" * 50)
 
 if __name__ == "__main__":
