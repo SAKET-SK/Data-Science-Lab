@@ -398,34 +398,52 @@ def create_excel_from_response(ai_response, filename_prefix="test_cases"):
                 else:
                     cell.fill = row_fill
         
-        # Set column widths to match template
+        # Set column widths to properly fit content (increased widths)
         column_widths = {
-            'A': 12,  # TestCaseID
-            'B': 15,  # TestScenarioID  
-            'C': 12,  # Area
-            'D': 15,  # ModuleName
-            'E': 18,  # SubModuleName
-            'F': 35,  # TestScenarioDescription
-            'G': 18,  # SubSubModuleName
-            'H': 12,  # Priority
-            'I': 40,  # TestCaseDescription
-            'J': 25,  # PreRequisites
-            'K': 20,  # TestData
-            'L': 45,  # NavigationSteps
-            'M': 30,  # ExpectedOutput
-            'N': 15,  # ActualOutput
-            'O': 15   # Status
+            'A': 15,  # TestCaseID
+            'B': 18,  # TestScenarioID  
+            'C': 20,  # Area
+            'D': 25,  # ModuleName
+            'E': 25,  # SubModuleName
+            'F': 50,  # TestScenarioDescription
+            'G': 25,  # SubSubModuleName
+            'H': 15,  # Priority
+            'I': 60,  # TestCaseDescription
+            'J': 35,  # PreRequisites
+            'K': 30,  # TestData
+            'L': 60,  # NavigationSteps
+            'M': 40,  # ExpectedOutput
+            'N': 20,  # ActualOutput
+            'O': 18   # Status
         }
         
         for col_letter, width in column_widths.items():
             ws.column_dimensions[col_letter].width = width
         
-        # Set row height for better readability
-        for row in ws.iter_rows():
-            ws.row_dimensions[row[0].row].height = 25
+        # Auto-adjust column widths based on content (with minimum widths set above)
+        for column in ws.columns:
+            max_length = 0
+            column_letter = column[0].column_letter
+            
+            for cell in column:
+                try:
+                    if cell.value:
+                        cell_length = len(str(cell.value))
+                        max_length = max(max_length, cell_length)
+                except:
+                    pass
+            
+            # Use the larger of: predefined width or content-based width
+            predefined_width = column_widths.get(column_letter, 15)
+            adjusted_width = max(predefined_width, min(max_length + 3, 80))  # Max 80 chars
+            ws.column_dimensions[column_letter].width = adjusted_width
+        
+        # Set row height for better readability (increased heights)
+        for row_num in range(2, ws.max_row + 1):
+            ws.row_dimensions[row_num].height = 35  # Increased from 25
         
         # Header row height
-        ws.row_dimensions[1].height = 30
+        ws.row_dimensions[1].height = 40  # Increased from 30
         
         # Save the workbook
         wb.save(filepath)
