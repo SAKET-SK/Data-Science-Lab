@@ -223,13 +223,12 @@ User Request: {user_request}
 
 INSTRUCTIONS:
 1. Use the RAG service context to understand the functionality deeply
-2. Generate EXACTLY 5 test scenarios based on this understanding
-3. Each scenario must have EXACTLY 5 test cases
-4. Follow the exact structure from the Excel templates
-5. Use workflow information for detailed navigation steps
-6. Make test cases realistic and executable based on RAG context
-7. Include proper test data and expected outputs
-8. Ensure comprehensive coverage of the requested functionality
+2. Generate as many realistic test scenarios as possible (minimum 2, maximum 10), and for each scenario provide 3 - 7 test cases.
+3. Follow the exact structure from the Excel templates
+4. Use workflow information for detailed navigation steps
+5. Make test cases realistic and executable based on RAG context
+6. Include proper test data and expected outputs
+7. Ensure comprehensive coverage of the requested functionality
 
 FORMAT: Return as JSON with this exact structure:
 {{
@@ -253,10 +252,10 @@ FORMAT: Return as JSON with this exact structure:
                     "actual_output": "",
                     "status": "Not Executed"
                 }}
-                // ... 4 more test cases
+                // ... more test cases
             ]
         }}
-        // ... 4 more scenarios
+        // ... more scenarios
     ]
 }}
 
@@ -625,7 +624,8 @@ def main():
             
             print("\n📝 Generated Response:")
             print("-" * 20)
-            print(ai_response[:500] + "..." if len(ai_response) > 500 else ai_response)
+            # print(ai_response[:500] + "..." if len(ai_response) > 500 else ai_response)
+            print(ai_response)
             
             # Export to Excel
             print("\n💾 Creating Excel file...")
