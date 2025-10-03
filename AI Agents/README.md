@@ -1,1 +1,2 @@
 - Agent 1 - Simple Agent :- This is a simple crew of 2 agents (researcher & writer) to demonstrate how CrewAI works.
+- Agent 1.1 - Simple Agent :- A Streamlit version of Agent 1 with UI enhancements.
