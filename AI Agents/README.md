@@ -1,0 +1,1 @@
+- Agent 1 : Simple Agent :- This is a simple crew of 2 agents (researcher & writer) to demonstrate how CrewAI works.
