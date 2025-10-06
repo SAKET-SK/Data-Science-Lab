@@ -1,2 +1,4 @@
 - Agent 1 - Simple Agent :- This is a simple crew of 2 agents (researcher & writer) to demonstrate how CrewAI works.
 - Agent 1.1 - Simple Agent :- A Streamlit version of Agent 1 with UI enhancements.
+- Agent 2 - Agent with Tools :- This notebook explores how we can use CrewAI tools to do our tasks. Use case automated script generator
+- Agent 2.1 - Agent with Tools :- A Streamlit version of Agent 2 with UI enhancements.
