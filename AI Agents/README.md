@@ -2,3 +2,5 @@
 - Agent 1.1 - Simple Agent :- A Streamlit version of Agent 1 with UI enhancements.
 - Agent 2 - Agent with Tools :- This notebook explores how we can use CrewAI tools to do our tasks. Use case automated script generator
 - Agent 2.1 - Agent with Tools :- A Streamlit version of Agent 2 with UI enhancements.
+- Agent 3 - Stock Analysis Agent :- This is a moderate level crew of 4 agents for the use case of Stock Market Analysis
+- Agent 3.1 - A streamlit version of above agent
