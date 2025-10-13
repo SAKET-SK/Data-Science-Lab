@@ -10,6 +10,6 @@
 9) Lab 4 :- Implement Zipf's Law of Length, Law of Meanings and Heap Law.
 10) Lab 5 :- Text classification for Sentimental analysis using KNN. Note: Use twitter data.
 11) Lab 6 :- Case Study :- Sentiment Analysis via Reviews.
-12) The Project :- A big agentic capstone project.
+12) The Project :- A big agentic capstone project. (RAG + MCP + AI Agents)
 
 Link to the blog : https://learnaimldswithsk.hashnode.dev/
