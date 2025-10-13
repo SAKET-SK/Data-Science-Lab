@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-10-13T16:50:43.712638",
+  "summary": {
+    "total_queries": 7,
+    "cache_hits": 1,
+    "cache_hit_rate": "14.3%",
+    "avg_latency": "0.56s"
+  },
+  "all_queries": [
+    {
+      "query": "What is casual leave?",
+      "latency": 0.57,
+      "source": "simple",
+      "docs": [
+        "./policies/Leave-Policy.pdf"
+      ]
+    },
+    {
+      "query": "What is casual leave?",
+      "latency": 0.0,
+      "source": "cache"
+    },
+    {
+      "query": "Compare casual leave and sick leave",
+      "latency": 0.75,
+      "source": "complex",
+      "docs": [
+        "./policies/Leave-Policy.pdf"
+      ]
+    },
+    {
+      "query": "What are POSH Policy Guidelines",
+      "latency": 0.78,
+      "source": "simple",
+      "docs": [
+        "./policies/posh-policy.pdf"
+      ]
+    },
+    {
+      "query": "What is the job of Internal Committee? How do they",
+      "latency": 0.64,
+      "source": "simple",
+      "docs": [
+        "./policies/posh-policy.pdf"
+      ]
+    },
+    {
+      "query": "How many casual leaves I get during a year",
+      "latency": 0.58,
+      "source": "simple",
+      "docs": [
+        "./policies/Leave-Policy.pdf"
+      ]
+    },
+    {
+      "query": "Any idea on how my annual salary increses?",
+      "latency": 0.59,
+      "source": "simple",
+      "docs": [
+        "./policies/Salary_Policy.pdf"
+      ]
+    }
+  ]
+}
